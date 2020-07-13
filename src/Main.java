@@ -1,16 +1,25 @@
 public class Main {
     public static void main(String[] args) {
-        long account =100;
-        long payment =1001;
-        long bonus = 0;
+        int account =100;
+        int payment =1001;
+        int bonus;
+
         if (payment > 1000) {
             bonus = payment / 100;
         }
-        String smile = " =)";
+        else {
+            bonus = 0;
+        }
+
+        String smile;
         if (bonus == 0) {
             smile = " =(";
         }
+        else {
+            smile = " =)";
+        }
 
-        System.out.println("Hello, thank you for your payment. Your balance is: " + (account + payment + bonus) + " RUB Your bonus is : " + bonus + " RUB." + smile);
+        int balance = account + payment + bonus;
+        System.out.println("Hello, thank you for your payment. Your balance is: " + balance + " RUB Your bonus is : " + bonus + " RUB." + smile);
     }
 }
